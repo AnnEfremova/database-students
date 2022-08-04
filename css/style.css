@@ -1,0 +1,375 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    word-break: break-word;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat-Medium"),
+        url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+        url("../fonts/Montserrat-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat-SemiBold"),
+        url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+        url("../fonts/Montserrat-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat-Bold"),
+        url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("../fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --light-color: #F9F9FC;
+    --light-purple-color: #EDEBFB;
+    --dark-grey-color: #7D7E92;
+    --grey-color: #DEDEDE;
+    --font-color: #484964;
+    --purple-color: #644DED;
+    --hover-color: #8B7BEB;
+    --active-color: #3623A7;
+    --red-color: #A30D11;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--font-color);
+    background-color: var(--light-color);
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    margin: 0 60px 0 60px;
+}
+
+.heading {
+    margin: 60px 0 50px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.block__wrapper {
+    margin-bottom: 40px;
+    padding: 40px 30px 30px 30px;
+    position: relative;
+    width: 1320px;
+    border: solid 1px var(--grey-color);
+    border-radius: 10px;
+}
+
+.form__heading {
+    padding: 2px 8px;
+    position: absolute;
+    top: -12px;
+    left: 28px;
+    width: 264px;
+    height: 25px;
+    background-color: var(--light-color);
+}
+
+.form__table {
+    margin-bottom: 5px;
+    width: 940px;
+    flex-wrap: wrap;
+}
+
+.block__input {
+    position: relative;
+    padding: 15px 25px;
+    width: 296px;
+    height: 50px;
+    font-size: 16px;
+    color: var(--dark-grey-color);
+    background-color: var(--light-purple-color);
+    border-radius: 10px;
+    border: none;
+}
+
+.input__wrapper {
+    position: relative;
+    margin-bottom: 25px;
+    width: 296px;
+    height: 50px;
+}
+
+.input__wrapper:not(:nth-child(3n)) {
+    margin-right: 25px;
+}
+
+.block__input:focus {
+    outline: none;
+    outline: solid 2px var(--hover-color);
+}
+
+.btn {
+    font-weight: 600;
+    color: var(--light-color);
+    background-color: var(--purple-color);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+}
+.form__btn {
+    padding: 13px 18px 13px 42px;
+    background-image: url(../img/cross.png);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 18px center;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+.btn:active {
+    background-color: var(--active-color);
+}
+
+.filter__heading {
+    padding: 2px 8px;
+    position: absolute;
+    top: -12px;
+    left: 28px;
+    width: 95px;
+    height: 25px;
+    background-color: var(--light-color);
+}
+
+.filter__table {
+    margin-bottom: 5px;
+}
+
+.filter__btn {
+   padding: 11px 18px; 
+}
+
+.block__input_filter:not(:nth-child(4n)) {
+    margin-right: 25px;
+}
+
+/* table */
+
+.table {
+    margin-bottom: 100px;
+}
+
+.header__line {
+    font-size: 16px;
+    font-weight: 500;
+    border-top: solid 1px var(--grey-color);
+}
+
+.table__line {
+    font-size: 16px;
+    font-weight: 500;
+    border-top: solid 1px var(--grey-color);
+}
+
+.header__value {
+    padding: 5px 18px 5px 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--font-color);
+    background-image: url(../img/arrow.png);
+    background-size: 14px 7px;
+    background-repeat: no-repeat;
+    background-position: right 5px top 12px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.header__value:hover {
+    background-color: var(--light-purple-color);
+}
+
+.header__value:active {
+    background-color: var(--hover-color);
+}
+
+.header__value_1 {
+    width: 72px;
+}
+
+.header__value_2 {
+    width: 121px;
+}
+
+.header__value_3 {
+    width: 144px;
+}
+
+.header__value_4 {
+    width: 161px;
+}
+
+.header__cell {
+    padding: 18px 0 18px 0;
+}
+
+.table__cell {
+    padding: 18px 0 18px 12px;
+}
+
+.table__cell_1 {
+    width: 29%;
+}
+
+.table__cell_2 {
+    width: 27%;
+}
+
+.table__cell_3 {
+    width: 21%;
+}
+
+.table__cell_4 {
+    width: 21%;
+}
+
+.table__cell_5-heading {
+    margin-left: auto;
+    width: 30px;
+    background-image: url(../img/ellipsis.png);
+    background-size: 26px 6px;
+    background-repeat: no-repeat;
+    background-position: center 25px;
+}
+
+.table__cell_5 {
+    margin-left: auto;
+    width: 30px;
+    background-image: url(../img/delete.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+/* validation */
+
+.error {
+    outline: solid 1px var(--red-color);
+}
+
+.input__wrapper::before {
+    z-index: 10;
+    width: 296px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    top: -17px;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--red-color);
+}
+
+/* пустое поле */
+.surname::before {
+    content: 'Введите фамилию';
+}
+
+.name::before {
+    content: 'Введите имя';
+}
+
+.secondName::before {
+    content: 'Введите отчество';
+}
+
+.faculty::before {
+    content: 'Введите факультет';
+}
+
+.birthDate::before {
+    content: 'Введите дату рождения';
+}
+
+.startDate::before {
+    content: 'Введите год';
+}
+
+/* Дата рождения */
+
+.birthDate-min::before {
+    content: 'Введите дату больше 01.01.1900';
+}
+
+.birthDate-max::before {
+    content: 'Вы ввели дату больше текущей';
+}
+
+/* Год начала обучения */
+
+.startDate-min::before {
+    content: 'Введите год больше 2000';
+}
+
+.startDate-max::before {
+    content: 'Вы ввели год больше текущего';
+}
+
+.filter-error::before {
+    content: 'Ничего не найдено';
+}
+
+.input__wrapper-filter:not(:nth-child(4n)) {
+    margin-right: 25px;
+}
+
+.displayNone {
+    display: none;
+}
