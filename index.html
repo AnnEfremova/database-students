@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">База данных студентов</h1>
+        <div class="block__wrapper form">
+            <div class="form__heading">Добавление нового студента</div>
+            <form class="form__add" action="">
+                <div class="form__table flex">
+                    <div class="input__wrapper">
+                        <input class="block__input block__input_form" id="surname" type="text" name="surname"
+                            placeholder="Фамилия">
+                    </div>
+                    <div class="input__wrapper">
+                        <input class="block__input block__input_form" id="name" type="text" name="name"
+                            placeholder="Имя">
+                    </div>
+                    <div class="input__wrapper">
+                        <input class="block__input block__input_form" id="secondName" type="text" name="secondName"
+                            placeholder="Отчество">
+                    </div>
+                    <div class="input__wrapper">
+                        <input class="block__input block__input_form" id="faculty" type="text" name="faculty"
+                            placeholder="Факультет">
+                    </div>
+                    <div class="input__wrapper">
+                        <input class="block__input block__input_form" id="birthDate" type="text" name="birthDate"
+                            onfocus="(this.type='date')" placeholder="Дата рождения">
+                    </div>
+                    <div class="input__wrapper">
+                        <input class="block__input block__input_form" id="startDate" type="number" name="startDate"
+                            placeholder="Год начала обучения">
+                    </div>
+                </div>
+                <div class="btn__wrapper">
+                    <input class="form__btn btn" type="submit" value="Добавить студента">
+                </div>
+            </form>
+        </div>
+
+        <div class="block__wrapper filter">
+            <div class="filter__heading">Фильтры</div>
+            <div class="filter__table flex">
+                <div class="input__wrapper input__wrapper-filter">
+                    <input class="block__input block__input_filter" id="fioFilter" type="text" name="fio"
+                        placeholder="ФИО">
+                </div>
+                <div class="input__wrapper input__wrapper-filter">
+                    <input class="block__input block__input_filter" id="facultyFilter" type="text" name="facultyFilter"
+                        placeholder="Факультет">
+                </div>
+                <div class="input__wrapper input__wrapper-filter">
+                    <input class="block__input block__input_filter" id="startDateFilter" type="number"
+                        name="startDateFilter" placeholder="Год начала обучения">
+                </div>
+                <div class="input__wrapper input__wrapper-filter">
+                    <input class="block__input block__input_filter" id="finalDateFilter" type="number"
+                        name="finalDateFilter" placeholder="Год окончания обучения">
+                </div>
+            </div>
+            <button class="btn-reset btn filter__btn">Сбросить</button>
+
+        </div>
+
+        <div class="table">
+            <div class="header__line flex">
+                <div class="header__cell table__cell_1">
+                    <button class="btn-reset header__value header__value_1">ФИО</button>
+                </div>
+                <div class="header__cell table__cell_2">
+                    <button class="btn-reset header__value header__value_2">Факультет</button>
+                </div>
+                <div class="header__cell table__cell_3">
+                    <button class="btn-reset header__value header__value_3">ДР и возраст</button>
+                </div>
+                <div class="header__cell table__cell_4">
+                    <button class="btn-reset header__value header__value_4">Годы обучения</button>
+                </div>
+                <div class="header__cell table__cell_5-heading">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
